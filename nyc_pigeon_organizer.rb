@@ -25,8 +25,9 @@ require 'pry'
 def nyc_pigeon_organizer(data)
   data.each_with_object({}) do |(key, value), name_hash|
       value.collect do |key2, value2|
-        binding.pry
+        
         value2.collect do |name|
+          binding.pry
         if !name_hash[name] 
           name_hash[name] = {}
         end
